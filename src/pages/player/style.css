@@ -16,16 +16,24 @@ h1 {
 
 video {
     width: 100%;
+    border: 1px solid black;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .video-wrapper {
     width: 100%;
-    max-width: 700px;
+    max-width: 720px;
     position: relative;
     display: flex;
     justify-content: center;
     overflow: hidden;
-    border-radius: 10px;
+    background: #000000;
 }
 
 .video-wrapper:hover .controls {
@@ -35,42 +43,29 @@ video {
 .controls {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
     position: absolute;
-    bottom: 30px;
-    padding: 14px;
+    bottom: 0px;
     width: 100%;
-    max-width: 500px;
     flex-wrap: wrap;
-    background: rgba(204, 0, 255, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
     transform: translateY(160%);
     transition: all 0.3s ease-in-out;
 }
 
-.actions button {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.actions button i {
-    background-color: none;
-    color: white;
-    font-size: 30px;
+.range-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="range"] {
-    -webkit-appearance: none !important;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    /* -webkit-appearance: none !important; */
+    /* background: rgba(255, 255, 255, 0.2); */
     height: 4px;
-    width: 350px;
+    width: 97%;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -83,6 +78,25 @@ input[type="range"]::-moz-range-progress {
     background: white;
 }
 
+.actions-container {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    width: 95%;
+}
+
+.actions-container .left {
+    display: flex;
+    width: 50%;
+}
+
+.actions-container .right {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .velocity {
     appearance: none;
     background: none;
@@ -93,15 +107,10 @@ input[type="range"]::-moz-range-progress {
     font-size: 16px;
 }
 
-.mute-btn {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.mute-btn i {
-    background-color: none;
+.action-buttons {
     color: white;
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

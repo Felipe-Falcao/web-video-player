@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './style.css'
-import VideoPlayer from '../../components/videoPlayer'
+import { VideoPlayer, FileButton } from '../../components'
 import useVideoPlayer from '../../hooks/useVideoPlayer'
 
 const Player = () => {
@@ -14,7 +14,7 @@ const Player = () => {
 
     return (
         <div className='container'>
-            <input type='file' onChange={handleVideoFileUpload} />
+            <FileButton onChange={handleVideoFileUpload} text='Selecione o vídeo desejado...' />
             <VideoPlayer
                 videoFilePath={videoFilePath}
                 videoElementRef={videoElement}

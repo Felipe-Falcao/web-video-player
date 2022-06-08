@@ -13,13 +13,16 @@ const Player = () => {
     } = useVideoPlayer(videoElement)
 
     return (
-        <div className='container'>
-            <FileButton onChange={handleVideoFileUpload} text='Selecione o vídeo desejado...' />
-            <VideoPlayer
-                videoFilePath={videoFilePath}
-                videoElementRef={videoElement}
-            />
-        </div>
+        <>
+            <div className='container'>
+                <FileButton onChange={handleVideoFileUpload} text='Selecione o vídeo desejado...' />
+                <VideoPlayer
+                    videoFilePath={videoFilePath}
+                    videoElementRef={videoElement}
+                />
+                <p>v0.1</p>
+            </div>
+        </>
     )
 }
 

@@ -15,7 +15,7 @@ button {
     max-width: 720px;
     position: relative;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     overflow: hidden;
     background: #000000;
 }
@@ -27,7 +27,6 @@ button {
 .controls {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     position: absolute;
     bottom: 0px;
@@ -77,24 +76,28 @@ input[type="range"]::-moz-range-progress {
 .actions-container .right {
     display: flex;
     width: 50%;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: end;
 }
 
-.velocity {
+select {
     appearance: none;
     background: none;
     color: white;
     outline: none;
     border: none;
     text-align: center;
+    justify-content: center;
     font-size: 16px;
+    cursor: pointer;
+}
+
+select option {
+    color: black;
 }
 
 .action-buttons {
     color: white;
     font-size: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }

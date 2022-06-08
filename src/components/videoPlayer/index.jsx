@@ -49,16 +49,17 @@ const VideoPlayer = ({ videoFilePath, videoElementRef }) => {
                                 <FaVolumeMute />
                             )}
                         </button>
-                        <select
-                            className='velocity'
-                            value={playerState.speed}
-                            onChange={(e) => handleVideoSpeed(e)}
-                        >
-                            <option value='0.50'>0.50x</option>
-                            <option value='1'>1x</option>
-                            <option value='1.25'>1.25x</option>
-                            <option value='2'>2x</option>
-                        </select>
+                        <div className='select'>
+                            <select
+                                value={playerState.speed}
+                                onChange={(e) => handleVideoSpeed(e)}
+                            >
+                                <option value='0.50'>0.50x</option>
+                                <option value='1'>1x</option>
+                                <option value='1.25'>1.25x</option>
+                                <option value='2'>2x</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>

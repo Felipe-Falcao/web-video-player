@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { FaVolumeMute, FaVolumeUp, FaPlay, FaPause } from 'react-icons/fa'
 import useVideoPlayer from '../../hooks/useVideoPlayer'
 import './style.css'
 
-const VideoPlayer = ({ videoFilePath, videoElement }) => {
+const VideoPlayer = ({ videoFilePath, videoElementRef }) => {
 
     const { playerState,
         togglePlay,
@@ -11,14 +11,14 @@ const VideoPlayer = ({ videoFilePath, videoElement }) => {
         handleOnTimeUpdate,
         handleVideoProgress,
         handleVideoSpeed,
-    } = useVideoPlayer(videoElement)
+    } = useVideoPlayer(videoElementRef)
 
     return (
         <div className='video-wrapper'>
             <video
                 height={500}
                 src={videoFilePath}
-                ref={videoElement}
+                ref={videoElementRef}
                 onTimeUpdate={handleOnTimeUpdate}
             />
             <div className='controls'>

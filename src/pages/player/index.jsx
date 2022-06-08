@@ -9,15 +9,15 @@ const Player = () => {
 
     const {
         videoFilePath,
-        handleVideoUpload,
+        handleVideoFileUpload,
     } = useVideoPlayer(videoElement)
 
     return (
         <div className='container'>
-            <input type='file' onChange={handleVideoUpload} />
+            <input type='file' onChange={handleVideoFileUpload} />
             <VideoPlayer
                 videoFilePath={videoFilePath}
-                videoElement={videoElement}
+                videoElementRef={videoElement}
             />
         </div>
     )

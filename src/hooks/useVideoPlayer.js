@@ -63,7 +63,7 @@ export default function useVideoPlayer($videoElement) {
         });
     };
 
-    const handleVideoUpload = (event) => {
+    const handleVideoFileUpload = (event) => {
         setVideoFilePath(URL.createObjectURL(event.target.files[0]));
     };
 
@@ -74,7 +74,7 @@ export default function useVideoPlayer($videoElement) {
         handleOnTimeUpdate,
         handleVideoProgress,
         handleVideoSpeed,
-        handleVideoUpload,
+        handleVideoFileUpload,
         toggleMute,
     }
 }

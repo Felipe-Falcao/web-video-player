@@ -1,11 +1,15 @@
 ## Video Player
 
-### Funcionalidades
+### Features
 
 - Play / Pause
 
-- Barra de progresso
+- Progress Bar
 
-- Mutar / Desmutar
+- Mute / UnMute
 
-- Velocidade de execução
+- Execution Speed Change
+
+### Deploy Example
+
+- https://react-player-video.herokuapp.com/

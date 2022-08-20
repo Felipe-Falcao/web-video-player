@@ -1,3 +1,4 @@
+// #page:RF001
 import React, { useRef } from 'react'
 import './style.css'
 import { VideoPlayer, FileButton } from '../../components'
